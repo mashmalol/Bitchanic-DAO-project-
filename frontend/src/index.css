@@ -1,0 +1,104 @@
+/* Global Animated Background */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes floatBubble {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.1;
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-40px) translateX(-10px);
+    opacity: 0.15;
+  }
+  75% {
+    transform: translateY(-20px) translateX(5px);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.1;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(
+    135deg,
+    #e8f5e9 0%,
+    #c8e6c9 25%,
+    #a5d6a7 50%,
+    #81c784 75%,
+    #66bb6a 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animated bubble overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(76, 175, 80, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(46, 125, 50, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(129, 199, 132, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+  animation: floatBubble 20s ease-in-out infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* RTL support for text direction */
+[dir='rtl'] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir='ltr'] {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

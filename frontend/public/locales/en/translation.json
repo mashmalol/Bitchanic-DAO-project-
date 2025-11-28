@@ -1,0 +1,126 @@
+{
+  "header": {
+    "title": "Bitchanic Farm",
+    "marketplace": "Marketplace",
+    "subscribe": "Subscribe",
+    "loyalty": "Loyalty",
+    "transparency": "Transparency"
+  },
+  "nav": {
+    "marketplace": "Marketplace",
+    "subscribe": "Subscribe",
+    "loyalty": "Loyalty",
+    "transparency": "Transparency",
+    "connect": "Connect Wallet",
+    "disconnect": "Disconnect"
+  },
+  "wallet": {
+    "connect": "Connect Wallet",
+    "disconnect": "Disconnect",
+    "connected": "Connected",
+    "balance": "Balance",
+    "address": "Address"
+  },
+  "cart": {
+    "title": "Cart",
+    "empty": "Cart is empty",
+    "total": "Total",
+    "remove": "Remove",
+    "checkout": "Checkout",
+    "addedToCart": "Added to cart"
+  },
+  "marketplace": {
+    "title": "Marketplace",
+    "price": "Price",
+    "stock": "Stock",
+    "harvest": "Harvest",
+    "addToCart": "Add to cart",
+    "view": "View",
+    "loading": "Loading products..."
+  },
+  "product": {
+    "name": "Name",
+    "price": "Price",
+    "stock": "Stock",
+    "harvest": "Harvest Date"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "cartItems": "Cart Items",
+    "total": "Total",
+    "estimatedGas": "Estimated Gas",
+    "confirmPurchase": "Confirm Purchase",
+    "pay": "Pay with BCHN",
+    "success": "Purchase successful!",
+    "error": "Error during purchase",
+    "processing": "Processing..."
+  },
+  "subscriptions": {
+    "title": "Subscription Plans",
+    "description": "Choose a regular delivery plan",
+    "weekly": "Weekly Box",
+    "weeklyDesc": "Weekly fresh produce delivery",
+    "weeklyPrice": "100 BCHN / month",
+    "monthly": "Monthly Deluxe",
+    "monthlyDesc": "Curated selection monthly",
+    "monthlyPrice": "250 BCHN / month",
+    "quarterly": "Quarterly Harvest",
+    "quarterlyDesc": "Comprehensive three-month bundle",
+    "quarterlyPrice": "500 BCHN / month",
+    "subscribeNow": "Subscribe Now",
+    "duration": "Duration (months)",
+    "success": "Subscription successful!",
+    "error": "Error during subscription"
+  },
+  "loyalty": {
+    "title": "Loyalty Program",
+    "points": "Points",
+    "tier": "Tier",
+    "bronze": "Bronze",
+    "silver": "Silver",
+    "gold": "Gold",
+    "platinum": "Platinum",
+    "claimRewards": "Claim Rewards",
+    "rewardsInfo": "1 point = 0.1 BCHN",
+    "unlockedBenefit": "Benefit",
+    "discount": "Discount",
+    "exclusive": "Exclusive access",
+    "success": "Rewards claimed successfully!",
+    "error": "Error claiming rewards"
+  },
+  "transparency": {
+    "title": "Farm Transparency & Sustainability",
+    "metrics": "Sustainability Metrics",
+    "carbonSaved": "CO₂ Saved",
+    "renewableEnergy": "Renewable Energy",
+    "waterSaved": "Water Saved",
+    "environmentalValue": "Environmental Value",
+    "podStatus": "Pod Status",
+    "health": "Health",
+    "temperature": "Temperature",
+    "humidity": "Humidity",
+    "energyBreakdown": "Energy Breakdown",
+    "miningWasteHeat": "Mining Waste Heat",
+    "climateControl": "Climate Control",
+    "irrigation": "Irrigation",
+    "cameraFeed": "Live Camera Feed"
+  },
+  "language": {
+    "en": "English",
+    "fa": "فارسی"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "pending": "Pending",
+    "confirmed": "Confirmed",
+    "failed": "Failed"
+  }
+}

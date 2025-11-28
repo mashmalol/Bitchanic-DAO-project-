@@ -1,0 +1,126 @@
+{
+  "header": {
+    "title": "مزرعه بیتچانیک",
+    "marketplace": "بازارچه",
+    "subscribe": "اشتراک",
+    "loyalty": "وفاداری",
+    "transparency": "شفافیت"
+  },
+  "nav": {
+    "marketplace": "بازارچه",
+    "subscribe": "اشتراک",
+    "loyalty": "وفاداری",
+    "transparency": "شفافیت",
+    "connect": "اتصال کیف پول",
+    "disconnect": "قطع اتصال"
+  },
+  "wallet": {
+    "connect": "اتصال کیف پول",
+    "disconnect": "قطع اتصال",
+    "connected": "متصل شده",
+    "balance": "موجودی",
+    "address": "آدرس"
+  },
+  "cart": {
+    "title": "سبد خرید",
+    "empty": "سبد خرید خالی است",
+    "total": "کل",
+    "remove": "حذف",
+    "checkout": "تسویه حساب",
+    "addedToCart": "به سبد خرید اضافه شد"
+  },
+  "marketplace": {
+    "title": "بازارچه",
+    "price": "قیمت",
+    "stock": "موجودی",
+    "harvest": "برداشت",
+    "addToCart": "افزودن به سبد",
+    "view": "مشاهده",
+    "loading": "در حال بارگذاری محصولات..."
+  },
+  "product": {
+    "name": "نام",
+    "price": "قیمت",
+    "stock": "موجودی",
+    "harvest": "تاریخ برداشت"
+  },
+  "checkout": {
+    "title": "تسویه حساب",
+    "cartItems": "اقلام سبد خرید",
+    "total": "کل",
+    "estimatedGas": "گاز تخمینی",
+    "confirmPurchase": "تأیید خرید",
+    "pay": "پرداخت با BCHN",
+    "success": "خرید موفقیت آمیز!",
+    "error": "خطا در خرید",
+    "processing": "در حال پردازش..."
+  },
+  "subscriptions": {
+    "title": "پلان‌های اشتراک",
+    "description": "انتخاب یک پلان تحویل منظم",
+    "weekly": "جعبه هفتگی",
+    "weeklyDesc": "تحویل هفتگی محصولات تازه",
+    "weeklyPrice": "۱۰۰ BCHN / ماه",
+    "monthly": "دلوکس ماهانه",
+    "monthlyDesc": "مجموعه‌ای گزیده ماهانه",
+    "monthlyPrice": "۲۵۰ BCHN / ماه",
+    "quarterly": "برداشت فصلی",
+    "quarterlyDesc": "بسته جامع سه‌ماهه",
+    "quarterlyPrice": "۵۰۰ BCHN / ماه",
+    "subscribeNow": "اشتراک اکنون",
+    "duration": "مدت زمان (ماه)",
+    "success": "اشتراک موفقیت آمیز!",
+    "error": "خطا در اشتراک"
+  },
+  "loyalty": {
+    "title": "برنامه وفاداری",
+    "points": "امتیازات",
+    "tier": "سطح",
+    "bronze": "برنز",
+    "silver": "نقره",
+    "gold": "طلا",
+    "platinum": "پلاتین",
+    "claimRewards": "دریافت پاداش",
+    "rewardsInfo": "۱ امتیاز = ۰.۱ BCHN",
+    "unlockedBenefit": "مزیت",
+    "discount": "تخفیف",
+    "exclusive": "دسترسی انحصاری",
+    "success": "پاداش با موفقیت دریافت شد!",
+    "error": "خطا در دریافت پاداش"
+  },
+  "transparency": {
+    "title": "شفافیت و پایداری مزرعه",
+    "metrics": "معیارهای پایداری",
+    "carbonSaved": "CO₂ ذخیره شده",
+    "renewableEnergy": "انرژی تجدیدپذیر",
+    "waterSaved": "آب ذخیره شده",
+    "environmentalValue": "ارزش محیطی",
+    "podStatus": "وضعیت کاشت‌بند",
+    "health": "سلامتی",
+    "temperature": "دما",
+    "humidity": "رطوبت",
+    "energyBreakdown": "تقسیم انرژی",
+    "miningWasteHeat": "گرمای هدر برق معدنی",
+    "climateControl": "کنترل آب و هوا",
+    "irrigation": "آبیاری",
+    "cameraFeed": "پخش دوربین زنده"
+  },
+  "language": {
+    "en": "English",
+    "fa": "فارسی"
+  },
+  "common": {
+    "loading": "در حال بارگذاری...",
+    "error": "خطا",
+    "success": "موفقیت",
+    "cancel": "لغو",
+    "confirm": "تأیید",
+    "save": "ذخیره",
+    "delete": "حذف",
+    "edit": "ویرایش",
+    "close": "بستن",
+    "pending": "درانتظار",
+    "confirmed": "تأیید شده",
+    "failed": "ناموفق"
+  }
+}
