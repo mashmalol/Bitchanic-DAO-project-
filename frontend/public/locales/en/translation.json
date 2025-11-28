@@ -1,4 +1,79 @@
 {
+  "landing": {
+    "hero": {
+      "title": "Sustainable Farming",
+      "subtitle": "Powered by Crypto",
+      "description": "Fresh hydroponic produce delivered to your door. Every purchase plants a tree and powers sustainable farming.",
+      "cta1": "Start Shopping",
+      "cta2": "Learn More"
+    },
+    "features": {
+      "title": "Why Choose Bitchanic?",
+      "subtitle": "Everything you need for sustainable, transparent farming and shopping",
+      "feature1": "100% Organic",
+      "feature2": "Zero Waste",
+      "feature3": "Eco-Friendly",
+      "crypto": "Crypto Payments",
+      "cryptoDesc": "Pay with BCHN tokens for transparent, borderless transactions",
+      "delivery": "Flexible Delivery",
+      "deliveryDesc": "Weekly, monthly, or quarterly subscription plans tailored to you",
+      "loyalty": "Loyalty Rewards",
+      "loyaltyDesc": "Earn points with every purchase and unlock exclusive benefits",
+      "transparency": "Farm Transparency",
+      "transparencyDesc": "Real-time metrics on sustainability and farm operations"
+    }
+  },
+  "metrics": {
+    "title": "Growing Together",
+    "subtitle": "Real impact by the numbers",
+    "users": "Active Users",
+    "products": "Products",
+    "orders": "Total Orders",
+    "carbon": "CO₂ Saved"
+  },
+  "testimonials": {
+    "title": "What Our Users Say",
+    "subtitle": "Join thousands of happy farmers and customers",
+    "user1": {
+      "name": "Sarah Johnson",
+      "role": "Organic Farmer",
+      "text": "Bitchanic has transformed how I reach customers. The transparency is incredible!"
+    },
+    "user2": {
+      "name": "Ahmed Hassan",
+      "role": "Crypto Enthusiast",
+      "text": "Finally, a platform that combines crypto with real-world impact. Love it!"
+    },
+    "user3": {
+      "name": "Maria Garcia",
+      "role": "Sustainability Officer",
+      "text": "The environmental metrics dashboard is game-changing for tracking our impact."
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Get answers to common questions about Bitchanic",
+    "q1": {
+      "question": "What is Bitchanic?",
+      "answer": "Bitchanic is a decentralized ecommerce platform for sustainable hydroponic produce. It combines cryptocurrency payments with farm transparency and loyalty rewards."
+    },
+    "q2": {
+      "question": "How do I purchase produce?",
+      "answer": "Connect your MetaMask wallet, browse products in our marketplace, add items to cart, and checkout with BCHN tokens. Each purchase earns you loyalty points."
+    },
+    "q3": {
+      "question": "What are subscription plans?",
+      "answer": "We offer weekly, monthly, and quarterly delivery subscriptions. Choose your preference and enjoy fresh produce on a regular schedule with exclusive subscriber benefits."
+    },
+    "q4": {
+      "question": "How does the loyalty program work?",
+      "answer": "Earn 1 loyalty point for every BCHN spent. Redeem points for BCHN tokens or unlock tier benefits like discounts and exclusive access to premium produce."
+    },
+    "q5": {
+      "question": "What blockchain is this on?",
+      "answer": "Bitchanic is built on Ethereum and Polygon for low fees and fast transactions. Our smart contract is audited and fully transparent."
+    }
+  },
   "header": {
     "title": "Bitchanic Farm",
     "marketplace": "Marketplace",

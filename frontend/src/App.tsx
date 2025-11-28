@@ -6,6 +6,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useTranslation } from 'react-i18next';
+import Landing from './pages/Landing';
 import Marketplace from './pages/Marketplace';
 import TokenBalance from './components/TokenBalance';
 import CartDrawer from './components/CartDrawer';
@@ -48,7 +49,7 @@ function App() {
       </AppBar>
       <Container sx={{ mt: 4 }}>
         <Routes>
-          <Route path="/" element={<Typography>Landing page coming soon.</Typography>} />
+          <Route path="/" element={<Landing />} />
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/subscriptions" element={<Subscriptions />} />
