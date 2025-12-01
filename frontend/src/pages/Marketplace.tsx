@@ -30,9 +30,9 @@ export default function Marketplace() {
   if (products.length === 0) return <Typography>{t('marketplace.loading')}</Typography>;
 
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={3}>
       {products.map(p => (
-        <Grid item xs={12} sm={6} md={4} key={p.id}>
+        <Grid item xs={12} sm={6} md={4} key={p.id} sx={{ display: 'flex' }}>
           <ProductCard product={p} />
         </Grid>
       ))}

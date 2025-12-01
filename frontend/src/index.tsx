@@ -6,29 +6,46 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
-import { greenTheme } from './theme';
+import { getGreenTheme, applyRetroOverrides } from './theme';
+import { createTheme } from '@mui/material/styles';
 import './i18n';
 import './index.css';
 
 const root = createRoot(document.getElementById('root')!);
 
-const app = React.createElement(
-  React.StrictMode,
-  null,
-  React.createElement(
-    Provider,
-    { store: store as any },
+function RootApp() {
+  const [mode, setMode] = React.useState<'light' | 'dark'>('dark');
+  const theme = React.useMemo(() => {
+    const base = getGreenTheme(mode);
+    // apply retro overrides on top and produce a merged theme
+    const overrides = applyRetroOverrides(base);
+    // createTheme will deep-merge provided objects
+    return createTheme(base, overrides as any);
+  }, [mode]);
+
+  const toggleTheme = () => setMode((m) => (m === 'dark' ? 'light' : 'dark'));
+
+  // Use React.createElement structure to avoid JSX typing issues with Provider in this project's TS config
+  const appTree = React.createElement(
+    React.StrictMode,
+    null,
     React.createElement(
-      ThemeProvider,
-      { theme: greenTheme },
+      Provider,
+      { store: store as any },
       React.createElement(
-        BrowserRouter,
-        null,
-        React.createElement(CssBaseline),
-        React.createElement(App)
+        ThemeProvider,
+        { theme },
+        React.createElement(
+          BrowserRouter,
+          null,
+          React.createElement(CssBaseline),
+          React.createElement(App, { themeMode: mode, toggleTheme })
+        )
       )
     )
-  )
-);
+  );
 
-root.render(app);
+  return appTree;
+}
+
+root.render(React.createElement(RootApp));

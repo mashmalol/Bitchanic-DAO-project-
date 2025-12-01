@@ -1,211 +1,153 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
-import SocialProof from '../components/SocialProof';
-import MetricsSection from '../components/MetricsSection';
-import FAQSection from '../components/FAQSection';
+import { useNavigate } from 'react-router-dom';
+import playBeep from '../lib/sfx';
 
-const HeroSection = () => {
-  const { t } = useTranslation();
+import corn from '../svgs/corn-svgrepo-com.svg';
+import bag from '../svgs/farming-bag-wheat-svgrepo-com.svg';
+import future from '../svgs/farming-future-of-farming-agriculture-svgrepo-com.svg';
+import infoAg from '../svgs/farming-information-agriculture-svgrepo-com.svg';
+import infoNet from '../svgs/farming-information-internet-svgrepo-com.svg';
+import less from '../svgs/farming-less-agriculture-svgrepo-com.svg';
+import science from '../svgs/farming-science-technology-svgrepo-com.svg';
+import tractor from '../svgs/farming-tractor-control-svgrepo-com.svg';
+import gm1 from '../svgs/gm-gmo-future-of-farming-svgrepo-com.svg';
+import gm2 from '../svgs/gmo-future-of-farming-genetically-svgrepo-com.svg';
+import harvest from '../svgs/harvest-svgrepo-com.svg';
+import hydro from '../svgs/hydroponic-soilless-farm-svgrepo-com.svg';
+import drone from '../svgs/survey-drone-future-of-farming-svgrepo-com.svg';
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
-  return (
-    <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="max-w-4xl mx-auto text-center"
-      >
-        <motion.h1
-          variants={itemVariants}
-          className="text-5xl sm:text-6xl lg:text-7xl font-bold text-green-900 mb-6 leading-tight"
-        >
-          {t('landing.hero.title', 'Sustainable Farming')}
-          <br />
-          <span className="bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-transparent">
-            {t('landing.hero.subtitle', 'Powered by Crypto')}
-          </span>
-        </motion.h1>
-
-        <motion.p
-          variants={itemVariants}
-          className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto"
-        >
-          {t('landing.hero.description', 'Fresh hydroponic produce delivered to your door. Every purchase plants a tree and powers sustainable farming.')}
-        </motion.p>
-
-        <motion.div
-          variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
-        >
-          <Link
-            to="/marketplace"
-            className="px-8 py-4 bg-gradient-to-r from-green-600 to-green-500 text-white font-semibold rounded-lg hover:shadow-lg hover:from-green-700 hover:to-green-600 transition-all duration-300 transform hover:scale-105"
-          >
-            {t('landing.hero.cta1', 'Start Shopping')}
-          </Link>
-          <button className="px-8 py-4 border-2 border-green-600 text-green-600 font-semibold rounded-lg hover:bg-green-50 transition-all duration-300">
-            {t('landing.hero.cta2', 'Learn More')}
-          </button>
-        </motion.div>
-
-        <motion.div
-          variants={itemVariants}
-          className="relative h-64 sm:h-80 rounded-2xl bg-gradient-to-br from-green-100 to-green-50 border-2 border-green-200 flex items-center justify-center overflow-hidden"
-        >
-          <motion.div
-            animate={{ y: [0, -20, 0] }}
-            transition={{ duration: 4, repeat: Infinity }}
-            className="text-8xl"
-          >
-            🌾
-          </motion.div>
-        </motion.div>
-
-        <motion.div
-          variants={itemVariants}
-          className="mt-12 grid grid-cols-2 sm:grid-cols-3 gap-6 text-center"
-        >
-          <div>
-            <p className="text-3xl font-bold text-green-900">100%</p>
-            <p className="text-gray-600">{t('landing.features.feature1', 'Organic')}</p>
-          </div>
-          <div>
-            <p className="text-3xl font-bold text-green-900">⚡</p>
-            <p className="text-gray-600">{t('landing.features.feature2', 'Zero Waste')}</p>
-          </div>
-          <div>
-            <p className="text-3xl font-bold text-green-900">🌍</p>
-            <p className="text-gray-600">{t('landing.features.feature3', 'Eco-Friendly')}</p>
-          </div>
-        </motion.div>
-      </motion.div>
-    </section>
-  );
-};
-
-const FeaturesSection = () => {
-  const { t } = useTranslation();
-
-  const features = [
-    {
-      emoji: '💰',
-      titleKey: 'landing.features.crypto',
-      descKey: 'landing.features.cryptoDesc'
-    },
-    {
-      emoji: '📦',
-      titleKey: 'landing.features.delivery',
-      descKey: 'landing.features.deliveryDesc'
-    },
-    {
-      emoji: '🎁',
-      titleKey: 'landing.features.loyalty',
-      descKey: 'landing.features.loyaltyDesc'
-    },
-    {
-      emoji: '🔍',
-      titleKey: 'landing.features.transparency',
-      descKey: 'landing.features.transparencyDesc'
-    },
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
-
-  return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="max-w-6xl mx-auto"
-      >
-        <h2 className="text-4xl sm:text-5xl font-bold text-center text-green-900 mb-4">
-          {t('landing.features.title', 'Why Choose Bitchanic?')}
-        </h2>
-        <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-          {t('landing.features.subtitle', 'Everything you need for sustainable, transparent farming and shopping')}
-        </p>
-
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-8"
-        >
-          {features.map((feature, idx) => (
-            <motion.div
-              key={idx}
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              className="p-8 bg-gradient-to-br from-green-50 to-white rounded-xl border border-green-200 hover:shadow-lg transition-shadow"
-            >
-              <div className="text-5xl mb-4">{feature.emoji}</div>
-              <h3 className="text-2xl font-bold text-green-900 mb-3">
-                {t(feature.titleKey)}
-              </h3>
-              <p className="text-gray-600">
-                {t(feature.descKey)}
-              </p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </motion.div>
-    </section>
-  );
-};
+const svgs: { src: string; alt: string; label: string }[] = [
+  { src: corn, alt: 'corn', label: 'Corn' },
+  { src: bag, alt: 'bag of wheat', label: 'Wheat' },
+  { src: future, alt: 'future of farming', label: 'Future' },
+  { src: infoAg, alt: 'agriculture info', label: 'AgriInfo' },
+  { src: infoNet, alt: 'internet info', label: 'NetInfo' },
+  { src: less, alt: 'less agriculture', label: 'Minimal' },
+  { src: science, alt: 'science and tech', label: 'TechFarm' },
+  { src: tractor, alt: 'tractor', label: 'Tractor' },
+  { src: gm1, alt: 'gmo future', label: 'GMO' },
+  { src: gm2, alt: 'gmo genetics', label: 'Genetics' },
+  { src: harvest, alt: 'harvest', label: 'Harvest' },
+  { src: hydro, alt: 'hydroponic farm', label: 'Hydro' },
+  { src: drone, alt: 'survey drone', label: 'Drone' },
+];
 
 export default function Landing() {
+  const navigate = useNavigate();
+  const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+
+  const handleCardClick = (idx: number) => {
+    try { playBeep({ freq: 880, duration: 0.08 }); } catch (e) { }
+  };
+
+  const handleCTA = (path: string) => {
+    try { playBeep({ freq: 1000, duration: 0.1 }); } catch (e) { }
+    navigate(path);
+  };
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      <HeroSection />
-      <FeaturesSection />
-      <MetricsSection />
-      <SocialProof />
-      <FAQSection />
-    </motion.div>
+    <div style={{ minHeight: '100vh', padding: '40px 32px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, rgba(34, 139, 34, 0.1) 0%, rgba(0, 100, 0, 0.05) 100%)' }}>
+      {/* Hero Section */}
+      <div style={{ maxWidth: 1100, width: '100%', marginBottom: 60, textAlign: 'center' }}>
+        <h1 style={{ fontFamily: 'Press Start 2P, monospace', fontSize: 40, marginBottom: 16, color: '#22dd22', textShadow: '0 0 10px rgba(34, 221, 34, 0.5)' }}>BITCHANIC</h1>
+        <p style={{ fontFamily: 'Press Start 2P, monospace', fontSize: 14, color: '#aaffaa', marginBottom: 8 }}>Sustainable Farming Powered by Crypto</p>
+        <p style={{ fontSize: 12, color: '#cccccc', marginBottom: 32, maxWidth: 600, margin: '8px auto 32px' }}>Discover the future of hydroponic farming with blockchain technology. Fresh produce, transparent supply chains, and rewarding token economics.</p>
+
+        {/* CTA Buttons */}
+        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 40 }}>
+          <button
+            onClick={() => handleCTA('/marketplace')}
+            style={{
+              fontFamily: 'Press Start 2P, monospace',
+              fontSize: 12,
+              padding: '12px 24px',
+              background: '#00aa00',
+              color: '#000',
+              border: '2px solid #00ff00',
+              cursor: 'pointer',
+              boxShadow: '0 4px 14px rgba(0, 255, 0, 0.3)',
+              transition: 'all 0.2s ease',
+              fontWeight: 'bold',
+            }}
+            onMouseEnter={(e) => {
+              (e.target as HTMLButtonElement).style.boxShadow = '0 8px 20px rgba(0, 255, 0, 0.6)';
+              (e.target as HTMLButtonElement).style.transform = 'scale(1.05)';
+            }}
+            onMouseLeave={(e) => {
+              (e.target as HTMLButtonElement).style.boxShadow = '0 4px 14px rgba(0, 255, 0, 0.3)';
+              (e.target as HTMLButtonElement).style.transform = 'scale(1)';
+            }}
+          >
+            SHOP NOW
+          </button>
+          <button
+            onClick={() => handleCTA('/subscriptions')}
+            style={{
+              fontFamily: 'Press Start 2P, monospace',
+              fontSize: 12,
+              padding: '12px 24px',
+              background: 'transparent',
+              color: '#00ff00',
+              border: '2px solid #00ff00',
+              cursor: 'pointer',
+              boxShadow: '0 4px 14px rgba(0, 255, 0, 0.2)',
+              transition: 'all 0.2s ease',
+              fontWeight: 'bold',
+            }}
+            onMouseEnter={(e) => {
+              (e.target as HTMLButtonElement).style.background = '#00aa00';
+              (e.target as HTMLButtonElement).style.color = '#000';
+            }}
+            onMouseLeave={(e) => {
+              (e.target as HTMLButtonElement).style.background = 'transparent';
+              (e.target as HTMLButtonElement).style.color = '#00ff00';
+            }}
+          >
+            SUBSCRIBE
+          </button>
+        </div>
+      </div>
+
+      {/* SVG Gallery Grid */}
+      <div style={{ maxWidth: 1100, width: '100%', marginBottom: 60 }}>
+        <h2 style={{ fontFamily: 'Press Start 2P, monospace', textAlign: 'center', marginBottom: 32, color: '#22dd22', fontSize: 20 }}>PRODUCTS</h2>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 20 }}>
+          {svgs.map((s, i) => (
+            <div
+              key={i}
+              onClick={() => handleCardClick(i)}
+              onMouseEnter={() => setHoveredIdx(i)}
+              onMouseLeave={() => setHoveredIdx(null)}
+              style={{
+                textAlign: 'center',
+                background: hoveredIdx === i ? 'rgba(0, 170, 0, 0.15)' : 'rgba(255, 255, 255, 0.02)',
+                padding: 16,
+                borderRadius: 4,
+                border: hoveredIdx === i ? '2px solid #00ff00' : '2px solid rgba(0, 170, 0, 0.3)',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                transform: hoveredIdx === i ? 'scale(1.08)' : 'scale(1)',
+                boxShadow: hoveredIdx === i ? '0 0 12px rgba(0, 255, 0, 0.3)' : 'none',
+              }}
+            >
+              <img
+                src={s.src}
+                alt={s.alt}
+                style={{ width: 120, height: 120, objectFit: 'contain', imageRendering: 'pixelated', display: 'block', margin: '0 auto 8px' }}
+              />
+              <p style={{ fontFamily: 'Press Start 2P, monospace', fontSize: 11, color: hoveredIdx === i ? '#00ff00' : '#aaffaa', marginBottom: 4 }}>{s.label}</p>
+              <p style={{ fontSize: 9, color: '#888888' }}>{s.alt}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Footer Info */}
+      <div style={{ maxWidth: 1100, width: '100%', textAlign: 'center', paddingTop: 40, borderTop: '1px solid rgba(0, 170, 0, 0.2)' }}>
+        <p style={{ fontFamily: 'Press Start 2P, monospace', fontSize: 12, color: '#22dd22', marginBottom: 8 }}>100% ORGANIC • ZERO WASTE • ECO-FRIENDLY</p>
+        <p style={{ fontSize: 11, color: '#999999' }}>Powered by BCHN token • Smart contract verified</p>
+      </div>
+    </div>
   );
 }
