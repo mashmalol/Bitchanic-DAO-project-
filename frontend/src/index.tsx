@@ -17,15 +17,12 @@ function RootApp() {
   const [mode, setMode] = React.useState<'light' | 'dark'>('dark');
   const theme = React.useMemo(() => {
     const base = getGreenTheme(mode);
-    // apply retro overrides on top and produce a merged theme
     const overrides = applyRetroOverrides(base);
-    // createTheme will deep-merge provided objects
     return createTheme(base, overrides as any);
   }, [mode]);
 
   const toggleTheme = () => setMode((m) => (m === 'dark' ? 'light' : 'dark'));
 
-  // Use React.createElement structure to avoid JSX typing issues with Provider in this project's TS config
   const appTree = React.createElement(
     React.StrictMode,
     null,

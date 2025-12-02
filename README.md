@@ -36,3 +36,35 @@ Notes:
 Next steps:
 - Build the React + TypeScript frontend in `/frontend` with Redux Toolkit, ethers.js and Material-UI.
 - Add end-to-end scripts, deployment to testnets (Polygon/Arbitrum), and CI.
+
+## Shadcn UI Button Component Integration
+
+### Installation
+To install the Shadcn UI button component, run the following command:
+
+```bash
+pnpm install @shadcn/ui
+```
+
+### Usage
+To use the button component in your React application, import it as follows:
+
+```javascript
+import { Button } from '@shadcn/ui';
+```
+
+### Example
+Here is an example of how to use the Button component:
+
+```javascript
+<Button variant="primary">Click Me</Button>
+```
+
+### Styling
+You can customize the button's cursor behavior with the following CSS:
+
+```css
+button {
+  cursor: pointer;
+}
+```

@@ -57,13 +57,6 @@ function App({ themeMode = 'dark', toggleTheme }: AppProps) {
               <img src={hydroIcon} alt="subscriptions" width={22} height={22} style={{ imageRendering: 'pixelated' }} />
             </IconButton>
           </Box>
-          <Button onClick={toggleLanguage} sx={{ ml: 2, color: 'inherit' }}>
-            {i18n.language === 'en' ? 'فارسی' : 'EN'}
-          </Button>
-          {/* Theme toggle */}
-          <Button onClick={toggleTheme} sx={{ ml: 1, color: 'inherit', fontWeight: 600 }}>
-            {themeMode === 'dark' ? '☀️ Light' : '🌙 Dark'}
-          </Button>
           <CartDrawer />
           <TokenBalance />
         </Toolbar>
